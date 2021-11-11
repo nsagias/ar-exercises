@@ -6,15 +6,6 @@ require_relative './exercise_3'
 puts "Exercise 4"
 puts "----------"
 
-# Your code goes here ...
-# Exercise 4: Loading a subset of stores
-
-
-
-
-
-
-
 
 # Borrowing and modifying the code from Exercise one, create 3 more stores:
 # Surrey (annual_revenue of 224000, carries women's apparel only)
@@ -30,15 +21,14 @@ Store.create(name: "Yaletown", annual_revenue: 430000, mens_apparel: true, women
 # fetch (a collection of) only those stores that carry men's apparel. 
 # Assign the results to a variable @mens_stores.
 @mens_stores = Store.where(mens_apparel: true,  womens_apparel: false)
-# 'id >=':
-# @womens_stores = Store.where(annual_revenue: >1000000, mens_apparel: false,  womens_apparel: true)
+
 
 # Do another fetch but this time load stores that carry women's apparel and are generating less than $1M in annual revenue.
 @womens_stores = Store.where('annual_revenue >= 1000000', mens_apparel: false,  womens_apparel: true)
 puts "#{@womens_stores}"
 
-# Loop through each of these stores and output their name and annual revenue on each line.
 
+# Loop through each of these stores and output their name and annual revenue on each line.
 @mens_stores.find_each do |s|
   puts s.name
   puts s.annual_revenue

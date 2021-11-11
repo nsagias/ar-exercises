@@ -5,10 +5,6 @@ require_relative './exercise_2'
 puts "Exercise 3"
 puts "----------"
 
-# Your code goes here ...
-# Exercise 3: Delete the third store
-
-
 # Load the third store (into @store3) as you did the other two before.
 @store3 = Store.find(2)
 
