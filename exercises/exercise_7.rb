@@ -19,3 +19,8 @@ print"> plesae write a store name "
 p @error_message
 # Attempt to create a store with the inputted name but leave out the other fields (annual_revenue, mens_apparel, and womens_apparel)
 # Display the error messages provided back from ActiveRecord to the user (one on each line) after you attempt to save/create the record
+p @error_message.class
+# @error_message.each do |e|
+#   puts e.name
+#   puts e.annual_revenue
+# end
